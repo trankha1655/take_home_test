@@ -1,0 +1,43 @@
+Global:
+  use_gpu: true
+  max_epoch: 150
+  eval_step: 5
+  n_classes: -1
+  label_list: ./datasets/labels.txt
+
+Model:
+  name: Mobiblenetv2
+  n_classes: -1
+  pretrain: 
+  multilabel: true
+
+
+Optimizer:
+  name: Adam  #support ["AdamW", "SGD", "Adam"]
+  opt_param:
+    beta1: 0.9
+    beta2: 0.999
+  init_lr: 0.001
+  weight_decay: 0.00003
+
+LR_scheduler:
+  warm_up_epoch: 5
+  eta_min: 0.000001
+  
+
+PostProcess:
+  name: ClsPostProcess
+
+Metric:
+  name: ClsMetric
+  main_indicator: f1 #support_dict ['acc', 'recall', 'precision', 'f1']
+
+Datasets:
+  data_dir: "/home/khatpn/KT/take_home_test/datasets"
+  train_data_path: "./datasets/train.txt"
+  val_data_path: "./datasets/val.txt"
+  test_data_path: "./datasets/test.txt"
+  input_size: 512
+  batch_size: 4
+  num_workers: 2
+  

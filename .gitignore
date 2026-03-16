@@ -1,0 +1,3 @@
+datasets/data_test/*
+datasets/data_train/*
+*.pth.tar

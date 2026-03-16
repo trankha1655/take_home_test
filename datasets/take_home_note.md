@@ -1,0 +1,2 @@
+Bài toán: 
+Trong 3 ngày, hãy training model phân loại các tag, tương ứng với các folder trong tập train. Sau đó đánh giá trên data trong folder tập test, không dùng các model LLM, hay multi modal. Hãy viết thành 1 document/ hay 1 file jupyter notebook cơ bản để trình bày quá trình training + đánh giá tập test + hướng cải thiện cho bài toán.
